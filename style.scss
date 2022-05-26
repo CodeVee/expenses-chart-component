@@ -185,6 +185,49 @@ body, html {
 
         
     }
+
+    &__line {
+        height: 2px;
+        border-radius: 1px;
+        background: $cream;
+        margin: 3.2rem 0;
+    }
+
+    &__footer {
+        height: 8.7rem;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: .9rem;
+
+        .text {
+            color: $medium-brown;
+            line-height: 2.3rem;
+            font-weight: $fw-400;
+            font-size: 1.8rem;
+        }
+
+        .header {
+            color: $dark-brown;
+            font-weight: $fw-700;
+            line-height: 6.2rem;
+            font-size: 4.8rem;
+            margin-top: .1rem;
+        }
+
+        .sub {
+            color: $dark-brown;
+            line-height: 2.3rem;
+            font-weight: $fw-700;
+            font-size: 1.8rem;
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
 }
 
 @media screen and (max-width: $desktop) {
