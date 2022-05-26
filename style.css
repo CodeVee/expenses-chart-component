@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  background: hsl(27deg, 66%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+  body, html {
+    font-size: 8.89px;
+  }
+}
+@media screen and (max-width: 430px) {
+  body, html {
+    font-size: 11.04px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body, html {
+    font-size: 10px;
+  }
+}

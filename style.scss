@@ -1,0 +1,56 @@
+$white: hsl(0, 0%, 100%);
+$soft-red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+$dark-brown: hsl(25, 47%, 15%);
+$medium-brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+
+$font-dm-sans: 'DM Sans', sans-serif;;
+$fw-400: 400;
+$fw-700: 700;
+$fs-8s: 8.89px;
+$fs-10: 10px;
+$fs-11s: 11.04px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-dm-sans;
+}
+
+.page {
+    background: $cream;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: $fs-8s;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: $fs-11s;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
