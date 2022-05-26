@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 10px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  background: hsl(27deg, 66%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  height: 66rem;
+  width: 54rem;
+}
+
+.balance {
+  height: 12.5rem;
+  background: hsl(10deg, 79%, 65%);
+  padding: 2.7rem 3.9rem 2.5rem 3.2rem;
+  border-radius: 2rem;
+  margin-bottom: 2.4rem;
+}
+.balance__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance__header {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+.balance__amount {
+  color: hsl(33deg, 100%, 98%);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+.balance__logo {
+  width: 7.2rem;
+  height: 4.8rem;
+}
+.balance__logo > img {
+  width: 100%;
+}
+
+.spending {
+  height: 51.1rem;
+  padding: 3.2rem 4rem 4rem;
+  background: hsl(33deg, 100%, 98%);
+  border-radius: 2rem;
+}
+.spending__header {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  margin-bottom: 6.6rem;
+}
+.spending__chart {
+  height: 17.8rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 1.791rem;
+}
+.spending__day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+.spending__day .day {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-top: 0.8rem;
+}
+.spending__day .bar {
+  background: hsl(10deg, 79%, 65%);
+  border-radius: 0.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.spending__day .bar .amount {
+  position: absolute;
+  background: hsl(25deg, 47%, 15%);
+  height: 4rem;
+  width: 7.1rem;
+  border-radius: 0.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  color: hsl(33deg, 100%, 98%);
+  top: -4.8rem;
+}
+.spending__day .bar:hover {
+  background: hsl(10deg, 100%, 76%);
+}
+.spending__day .bar:hover .amount {
+  display: flex;
+}
+.spending__day .bar--active {
+  background: hsl(186deg, 34%, 60%);
+}
+.spending__day .bar--active:hover {
+  background: hsl(186deg, 49%, 80%);
+}
+.spending__day .bar--mon {
+  height: 5rem;
+}
+.spending__day .bar--tue {
+  height: 10rem;
+}
+.spending__day .bar--wed {
+  height: 15rem;
+}
+.spending__day .bar--thu {
+  height: 8.9rem;
+}
+.spending__day .bar--fri {
+  height: 6.7rem;
+}
+.spending__day .bar--sat {
+  height: 12.4rem;
+}
+.spending__day .bar--sun {
+  height: 7.3rem;
+}
+.spending__line {
+  height: 2px;
+  border-radius: 1px;
+  background: hsl(27deg, 66%, 92%);
+  margin: 3.2rem 0;
+}
+.spending__footer {
+  height: 8.7rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.9rem;
+}
+.spending__footer .text {
+  color: hsl(28deg, 10%, 53%);
+  line-height: 2.3rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.spending__footer .header {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  line-height: 6.2rem;
+  font-size: 4.8rem;
+  margin-top: 0.1rem;
+}
+.spending__footer .sub {
+  color: hsl(25deg, 47%, 15%);
+  line-height: 2.3rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.spending__footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1280px) {
+  body, html {
+    font-size: 8.89px;
+  }
+}
+@media screen and (max-width: 430px) {
+  body, html {
+    font-size: 11.04px;
+  }
+
+  .cards {
+    height: 53.4rem;
+    width: 34.3rem;
+  }
+
+  .balance {
+    height: 9.7rem;
+    padding: 2rem 2.4rem 2.2rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.6rem;
+  }
+  .balance__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0.4rem;
+  }
+  .balance__amount {
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+  }
+  .balance__logo {
+    width: 6rem;
+    height: 4rem;
+  }
+
+  .spending {
+    height: 42.1rem;
+    padding: 2.4rem 2rem;
+    border-radius: 1rem;
+  }
+  .spending__header {
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    margin-bottom: 5.2rem;
+  }
+  .spending__chart {
+    height: 17.7rem;
+    column-gap: 1.3rem;
+  }
+  .spending__day .day {
+    margin-top: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  .spending__day .bar {
+    border-radius: 0.3rem;
+  }
+  .spending__line {
+    margin: 2.4rem 0;
+  }
+  .spending__footer {
+    height: 6.3rem;
+    padding-bottom: 0.5rem;
+  }
+  .spending__footer .text {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+  .spending__footer .header {
+    line-height: 3.9rem;
+    font-size: 3rem;
+    margin-top: 0.4rem;
+  }
+  .spending__footer .sub {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  body, html {
+    font-size: 10px;
+  }
+}
