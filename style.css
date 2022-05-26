@@ -17,6 +17,48 @@ body, html {
   align-items: center;
 }
 
+.cards {
+  height: 66rem;
+  width: 54rem;
+}
+
+.balance {
+  height: 12.5rem;
+  background: hsl(10deg, 79%, 65%);
+  padding: 2.7rem 3.9rem 2.5rem 3.2rem;
+  border-radius: 2rem;
+  margin-bottom: 2.4rem;
+}
+.balance__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance__header {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+.balance__amount {
+  color: hsl(33deg, 100%, 98%);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+.balance__logo {
+  width: 7.2rem;
+  height: 4.8rem;
+}
+
+.spending {
+  height: 51.1rem;
+  padding: 3.2rem 4rem 4rem;
+  background: hsl(33deg, 100%, 98%);
+  border-radius: 2rem;
+}
+
 @media screen and (max-width: 1280px) {
   body, html {
     font-size: 8.89px;
