@@ -2,10 +2,13 @@ const url = 'data.json';
 const amountSuffix = '-amount';
 const barSuffix = '-bar';
 const activeClass = 'bar--active';
+const animationClasses = ['animate__animated', 'animate__fadeInDown'];
 
-const handler = (e) => {
-    loadData();
-};
+const amountElements = Array.from(document.getElementsByClassName('amount'));
+
+const setAnimations = () => 
+    amountElements.forEach(element => element.classList.add(...animationClasses));
+
 
 const loadData = async () => {
     const data = await fetch(url)
@@ -25,5 +28,10 @@ const loadData = async () => {
         }
     });
 }
+
+const handler = (e) => {
+    setAnimations();
+    loadData();
+};
 
 document.addEventListener('DOMContentLoaded', handler);
