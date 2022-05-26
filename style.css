@@ -58,6 +58,88 @@ body, html {
   background: hsl(33deg, 100%, 98%);
   border-radius: 2rem;
 }
+.spending__header {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  margin-bottom: 6.6rem;
+}
+.spending__chart {
+  height: 17.8rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 1.791rem;
+}
+.spending__day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+.spending__day .day {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.spending__day .bar {
+  background: hsl(10deg, 79%, 65%);
+  border-radius: 0.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.spending__day .bar .amount {
+  position: absolute;
+  background: hsl(25deg, 47%, 15%);
+  height: 4rem;
+  width: 7.1rem;
+  border-radius: 0.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  color: hsl(33deg, 100%, 98%);
+  top: -4.8rem;
+}
+.spending__day .bar:hover {
+  background: hsl(10deg, 100%, 76%);
+}
+.spending__day .bar:hover .amount {
+  display: flex;
+}
+.spending__day .bar--active {
+  background: hsl(186deg, 34%, 60%);
+}
+.spending__day .bar--active:hover {
+  background: hsl(186deg, 49%, 80%);
+}
+.spending__day .bar--mon {
+  height: 5rem;
+}
+.spending__day .bar--tue {
+  height: 10rem;
+}
+.spending__day .bar--wed {
+  height: 15rem;
+}
+.spending__day .bar--thu {
+  height: 8.9rem;
+}
+.spending__day .bar--fri {
+  height: 6.7rem;
+}
+.spending__day .bar--sat {
+  height: 12.4rem;
+}
+.spending__day .bar--sun {
+  height: 7.3rem;
+}
 
 @media screen and (max-width: 1280px) {
   body, html {

@@ -1,6 +1,8 @@
 $white: hsl(0, 0%, 100%);
 $soft-red: hsl(10, 79%, 65%);
+$soft-red-light: hsla(10, 100%, 76%, 1);
 $cyan: hsl(186, 34%, 60%);
+$cyan-light: hsla(186, 49%, 80%, 1);
 $dark-brown: hsl(25, 47%, 15%);
 $medium-brown: hsl(28, 10%, 53%);
 $cream: hsl(27, 66%, 92%);
@@ -81,6 +83,108 @@ body, html {
     padding: 3.2rem 4rem 4rem;
     background: $very-pale-orange;
     border-radius: 2rem;
+
+    &__header {
+        color: $dark-brown;
+        font-weight: $fw-700;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+        margin-bottom: 6.6rem;
+    }
+
+    &__chart {
+        height: 17.8rem;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: 1.791rem;
+    }
+
+    &__day {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        cursor: pointer;
+
+        .day {
+            color: $medium-brown;
+            font-size: 1.5rem;
+            font-weight: $fw-400;
+            line-height: 2rem;
+        }
+
+        .bar {
+            background: $soft-red;
+            border-radius: .5rem;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .amount {
+                position: absolute;
+                background: $dark-brown;
+                height: 4rem;
+                width: 7.1rem;
+                border-radius: .5rem;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: $fw-700;
+                line-height: 2.3rem;
+                color: $very-pale-orange;
+                top: -4.8rem;
+            }
+
+            &:hover {
+                background: $soft-red-light;
+
+                .amount {
+                    display: flex;
+                }
+            }
+
+            &--active {
+                background: $cyan;
+
+                &:hover {
+                    background: $cyan-light;
+                }
+            }
+
+            &--mon {
+                height: 5rem;
+            }
+
+            &--tue {
+                height: 10rem;
+            }
+
+            &--wed {
+                height: 15rem;
+            }
+
+            &--thu {
+                height: 8.9rem;
+            }
+
+            &--fri {
+                height: 6.7rem;
+            }
+
+            &--sat {
+                height: 12.4rem;
+            }
+
+            &--sun {
+                height: 7.3rem;
+            }
+        }
+
+        
+    }
 }
 
 @media screen and (max-width: $desktop) {
